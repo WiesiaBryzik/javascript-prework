@@ -1,4 +1,3 @@
-	
 function playGame(playerInput) {
 	clearMessages ();		
 		
@@ -42,7 +41,7 @@ function playGame(playerInput) {
 	}
 
 	displayResult(computerMove, playerMove);
-	printMessage('Wynik<br> Gracz - Komputer <br>'+ player + ' - ' + computer);
+	printResult('Wynik<br> Gracz - Komputer <br>'+ player + ' - ' + computer);
 }
 
 document.getElementById('rock').addEventListener('click', function(){

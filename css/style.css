@@ -1,15 +1,21 @@
 /*Global*/
-.title {
+body {
+  background-color: black;
+  color: grey;
+}
+
+body .title {
   text-decoration: underline;
   text-align: center;
   color: white;
 }
 
-.subtitle {
+body .subtitle {
   text-align: center;
   text-transform: uppercase;
 }
 
+/*Game*/
 button {
   display: -ms-flexbox;
   display: flex;
@@ -17,6 +23,7 @@ button {
   padding: 10px;
   background-color: black;
   color: grey;
+  font-size: 20px;
 }
 
 p {
@@ -25,13 +32,14 @@ p {
   text-transform: uppercase;
 }
 
-body {
-  background-color: black;
-  color: grey;
-}
-
 #messages {
   text-align: center;
   margin: 85px 0;
+  font-size: 20px;
+}
+
+#result {
+  text-align: center;
+  font-size: 25px;
 }
 /*# sourceMappingURL=style.css.map */
