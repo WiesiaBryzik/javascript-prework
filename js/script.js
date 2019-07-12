@@ -1,5 +1,4 @@
-	let player = 0;
-	let computer = 0; 
+	
 function playGame(playerInput) {
 	clearMessages ();		
 		
@@ -43,9 +42,8 @@ function playGame(playerInput) {
 	}
 
 	displayResult(computerMove, playerMove);
-	printMessage('<b>Wynik</b> (Gracz:Komputer):'+ player + '-' + computer);
+	printMessage('Wynik<br> Gracz - Komputer <br>'+ player + ' - ' + computer);
 }
-
 
 document.getElementById('rock').addEventListener('click', function(){
   playGame(1);
@@ -56,3 +54,6 @@ document.getElementById('paper').addEventListener('click', function(){
 document.getElementById('scissors').addEventListener('click', function(){
   playGame(3);
 });
+
+let player = 0;
+let computer = 0; 
