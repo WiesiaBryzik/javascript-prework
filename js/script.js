@@ -1,6 +1,17 @@
-function playGame(playerInput) {
+{
+//starts game
+const playGame = function (playerInput) {
 	clearMessages ();		
 		
+	const playerMove = getMoveName(playerInput);
+	printMessage('Twój ruch to: ' + playerMove);
+		
+	const randomNumber = Math.floor(Math.random() * 3 + 1);
+	console.log('Wylosowana liczba to: ' + randomNumber);
+	const computerMove = getMoveName(randomNumber);
+	printMessage('Mój ruch to: ' + computerMove);
+	
+	//changes number into movement
 	function getMoveName(argMoveId) {
 		if (argMoveId == 1) {
 			return 'kamień';
@@ -13,18 +24,9 @@ function playGame(playerInput) {
 			return 'nieznany ruch';
 		}
 	}
-
-	let playerMove = getMoveName(playerInput);
-	printMessage('Twój ruch to: ' + playerMove);
 	
-	let randomNumber = Math.floor(Math.random() * 3 + 1);
-	console.log('Wylosowana liczba to: ' + randomNumber);
-	let computerMove = getMoveName(randomNumber);
-
-	printMessage('Mój ruch to: ' + computerMove);
-
-	function displayResult(argComputerMove, argPlayerMove) {
-
+	// displays the result
+	const displayResult = function(argComputerMove, argPlayerMove) {
 		if ( argComputerMove == argPlayerMove) {
 			printMessage('Remis!');
 		} else if (
@@ -38,11 +40,11 @@ function playGame(playerInput) {
 			printMessage('Przegrywasz!');
 			computer = computer + 1;
 		}
-	}
-
-	displayResult(computerMove, playerMove);
+	};
+	
+	displayResult (computerMove, playerMove);
 	printResult('Wynik<br> Gracz - Komputer <br>'+ player + ' - ' + computer);
-}
+};
 
 document.getElementById('rock').addEventListener('click', function(){
   playGame(1);
@@ -56,3 +58,4 @@ document.getElementById('scissors').addEventListener('click', function(){
 
 let player = 0;
 let computer = 0; 
+}
